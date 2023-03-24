@@ -26,13 +26,14 @@ function ProjectForm({btnText, handleSubmit, projectData}){
     //Na hora do submit do form, irá disparar o Post no elemento pai
     const submit = (e)=>{
         e.preventDefault()
+        // console.log(project);
         handleSubmit(project)
     }
 
     function handleChange(e){
         //1                2            3               4
         setProject({ ...project, [e.target.name]: e.target.value});
-        console.log(project);
+        // console.log(project);
     }
     /*
     * 1 - Novo valor de 'project'
@@ -40,7 +41,7 @@ function ProjectForm({btnText, handleSubmit, projectData}){
     * 3 - nome do campo que foi digitado
     * 4 - valor digitado
     */
-
+    //Pega o ID e o nome da categoria
     function handleCategory(e){
         setProject({
             ...project,
@@ -59,6 +60,7 @@ function ProjectForm({btnText, handleSubmit, projectData}){
                 name="name"
                 placeholder="Insira o nome do projeto"
                 handleOnChange={handleChange}
+                value={project.name ? project.name: ""}
             />
             <Input
                 type="number"
@@ -66,12 +68,14 @@ function ProjectForm({btnText, handleSubmit, projectData}){
                 name="budget"
                 placeholder="Insira o valor do projeto"
                 handleOnChange={handleChange}
+                value={project.budget ? project.budget : ""}
             />
             <Select
                 name="category_id"
                 text="Selecione a categoria"
                 options={categories}
                 handleOnChange = {handleCategory}
+                value={project.category ? project.category.id : ""}
             />
             <SubmitButton text={btnText}/>
         </form>
