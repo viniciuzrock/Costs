@@ -33,7 +33,7 @@ function ProjectForm({btnText, handleSubmit, projectData}){
     function handleChange(e){
         //1                2            3               4
         setProject({ ...project, [e.target.name]: e.target.value});
-        // console.log(project);
+        console.log(project);
     }
     /*
     * 1 - Novo valor de 'project'
