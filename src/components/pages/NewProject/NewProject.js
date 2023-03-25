@@ -24,9 +24,13 @@ function NewProject(){
             body: JSON.stringify(project)
         }).then((resp)=> resp.json()).then((data)=>{
             console.log(data)
+            console.log("data")
             navigate("/projects", {
-                message:"Success"
-            })
+                    state:{
+                        message:"Success",
+                    }
+                }
+            )
         }).catch((e)=>{
             console.log(e)
         })
