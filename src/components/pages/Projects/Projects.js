@@ -5,29 +5,34 @@ import LinkButton from "../../layout/LinkButton/LinkButton"
 import styles from "./Projects.module.css"
 import ProjectCard from "../../Project/ProjectCard/ProjectCard"
 import { useState, useEffect } from "react"
+import Loading from "../../layout/Loading/Loading"
 
 
 function Projects(){
 
     const [projects, setProjects] = useState([])
-
     const location = useLocation()
+    const [removeLoading, setremoveLoading] = useState(false)
     let message = ""
     if(location.state){
         message = location.state.message
     }
 
     useEffect(()=>{
-        fetch("http://localhost:5000/projects",{
-            method: "GET",
-            headers: {
-                "Content-type": "Application/json",
-            }
-        }).then((resp) => resp.json()).then((data=>{
-            setProjects(data)
-        })).catch((e)=>{
-            console.log(e)
-        })
+        setTimeout(()=>{
+
+            fetch("http://localhost:5000/projects",{
+                method: "GET",
+                headers: {
+                    "Content-type": "Application/json",
+                }
+            }).then((resp) => resp.json()).then((data=>{
+                setProjects(data)
+                setremoveLoading(true)
+            })).catch((e)=>{
+                console.log(e)
+            })
+        }, 1000)
     },[])
 
     return(
@@ -50,6 +55,10 @@ function Projects(){
                             // handleRemove
                         />
                     ))
+                }
+                {!removeLoading && <Loading/>}
+                {removeLoading && projects.length === 0 &&
+                    <p>Não há projetos cadastrados!</p>
                 }
             </Container>
 
