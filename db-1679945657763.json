@@ -2,75 +2,75 @@
   "projects": [
     {
       "0": {},
-      "name": "Novo Teste",
-      "budget": "5000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 16
-    },
-    {
-      "0": {},
-      "name": "Contratação de Dev Jr",
-      "budget": "3600",
+      "name": "Teste",
+      "budget": "5",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": [],
-      "id": 17
+      "id": 10
     },
     {
       "0": {},
-      "name": "Sistema de E-commerce com API da VTEX",
-      "budget": "24000",
+      "name": "teste2",
+      "budget": "234",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "3",
+        "name": "Design"
       },
       "cost": 0,
       "services": [],
-      "id": 18
+      "id": 11
     },
     {
       "0": {},
-      "name": "teste mensagem",
-      "budget": "123123",
+      "name": "wd",
+      "budget": "123",
       "category": {
-        "id": "4",
-        "name": "Planejamento"
+        "id": "3",
+        "name": "Design"
       },
       "cost": 0,
       "services": [],
-      "id": 19
+      "id": 12
     },
     {
       "0": {},
-      "name": "Desenvolvedor Back-end",
-      "budget": "3600",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 20
-    },
-    {
-      "0": {},
-      "name": "Novo Teste",
-      "budget": "343434",
+      "name": "teste2",
+      "budget": "45646",
       "category": {
         "id": "4",
         "name": "Planejamento"
       },
       "cost": 0,
       "services": [],
-      "id": 21
+      "id": 13
+    },
+    {
+      "0": {},
+      "name": "teste2",
+      "budget": "657",
+      "category": {
+        "id": "1",
+        "name": "Infraestrutura"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 14
+    },
+    {
+      "0": {},
+      "name": "Teste",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "budget": "23423",
+      "cost": 0,
+      "services": [],
+      "id": 15
     }
   ],
   "categories": [
