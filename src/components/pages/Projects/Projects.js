@@ -44,7 +44,6 @@ function Projects(){
                 "Content-type":"application/json"
             }
         }).then((resp)=> resp.json()).then((data)=>{
-            console.log(data);
             setProjects(projects.filter((project)=> project.id !== id))
             setProjectMessage("Projeto removido com sucesso!")
         }).catch((e)=>{

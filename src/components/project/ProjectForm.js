@@ -8,7 +8,10 @@ import styles from "./ProjectForm.module.css"
 function ProjectForm({btnText, handleSubmit, projectData}){
 
     const [categories, setCategories] = useState([]);
-    const [project, setProject] = useState([ projectData || {} ]);
+    // const [project, setProject] = useState([ projectData || {} ]);
+    const [project, setProject] = useState(projectData || {});
+    console.log('ZZZZZZZZZZZZZ2232222');
+    console.log(projectData);
 
     useEffect(()=>{
         fetch("http://localhost:5000/categories",{
@@ -51,6 +54,10 @@ function ProjectForm({btnText, handleSubmit, projectData}){
             }
         })
     }
+
+    console.log('ZZZZZZZZZZZ');
+    console.log(project);
+    console.log(project.name);
     return(
 
         <form onSubmit={submit} className={styles.form}>
@@ -60,7 +67,8 @@ function ProjectForm({btnText, handleSubmit, projectData}){
                 name="name"
                 placeholder="Insira o nome do projeto"
                 handleOnChange={handleChange}
-                value={project.name ? project.name: ""}
+                // value={project.name ? project.name: ""}
+                value={project.name}
             />
             <Input
                 type="number"

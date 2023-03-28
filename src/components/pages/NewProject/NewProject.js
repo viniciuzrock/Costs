@@ -10,9 +10,6 @@ function NewProject(){
     const navigate = useNavigate()
 
     function createPost(project){
-
-        console.log(project);
-
         project.cost = 0;
         project.services = [];
 
@@ -23,8 +20,6 @@ function NewProject(){
             },
             body: JSON.stringify(project)
         }).then((resp)=> resp.json()).then((data)=>{
-            console.log(data)
-            console.log("data")
             navigate("/projects", {
                     state:{
                         message:"Success",

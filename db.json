@@ -20,14 +20,21 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 1222,
+      "services": [
+        {
+          "name": "testenovo",
+          "cost": "1222",
+          "description": "rthrshrhsrthsrth",
+          "id": "10eb03ac-2466-4787-804a-c577a4f2e477"
+        }
+      ],
       "id": 18
     },
     {
       "0": {},
       "name": "Desenvolvedor Back-end",
-      "budget": "3600",
+      "budget": "4000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
